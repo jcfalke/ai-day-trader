@@ -1,0 +1,25 @@
+{
+  "name": "@ai-trader/agent",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node dist/index.js",
+    "run-once": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@ai-trader/shared": "*",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}

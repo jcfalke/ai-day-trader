@@ -1,0 +1,24 @@
+# Environment
+.env
+.env.local
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Database
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+
+# Runtime
+.pids/
+.claude/

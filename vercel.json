@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm ci && npm run build --workspace=packages/shared && npm run build --workspace=packages/frontend",
+  "outputDirectory": "packages/frontend/.next",
+  "installCommand": "npm ci",
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}
