@@ -3,8 +3,8 @@
 // ============================================================
 import dotenv from "dotenv";
 // Local dev: load from monorepo root. Production (Railway): env vars injected directly.
-dotenv.config({ path: "../../.env" });
-dotenv.config();
+dotenv.config({ path: "../../.env", override: true });
+dotenv.config({ override: true });
 
 import express from "express";
 import cors from "cors";
@@ -15,7 +15,8 @@ import positionsRouter from "./routes/positions";
 import candlesRouter from "./routes/candles";
 
 const app = express();
-const PORT = process.env.BACKEND_PORT ?? 3001;
+// Railway injects PORT; fall back to BACKEND_PORT for local dev
+const PORT = process.env.PORT ?? process.env.BACKEND_PORT ?? 3001;
 
 const allowedOrigins = (process.env.FRONTEND_URL ?? "http://localhost:3000").split(",").map(s => s.trim());
 app.use(cors({ origin: (origin, cb) => cb(null, true) })); // Vercel preview URLs vary; restrict via FRONTEND_URL in prod if needed
