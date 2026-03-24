@@ -1,0 +1,6 @@
+{
+  "installCommand": "cd ../.. && npm install --include=dev",
+  "buildCommand": "cd ../.. && npm run build --workspace=packages/shared && npm run build --workspace=packages/frontend",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}

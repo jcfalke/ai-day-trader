@@ -11,6 +11,9 @@ dist/
 data/*.db
 data/*.db-shm
 data/*.db-wal
+**/*.db
+**/*.db-shm
+**/*.db-wal
 
 # Logs
 logs/
@@ -22,3 +25,4 @@ logs/
 # Runtime
 .pids/
 .claude/
+.vercel
